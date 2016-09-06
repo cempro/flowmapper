@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon2.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon3.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon4.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon5.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon6.png</file>
+    </qresource>
+	<qresource prefix="/plugins/flowmapper" >
+        <file>icon7.png</file>
+    </qresource>
+    <qresource prefix="/plugins/flowmapper" >
+        <file>icon8.png</file>
+    </qresource>
+    
+</RCC>

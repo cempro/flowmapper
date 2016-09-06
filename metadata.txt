@@ -1,0 +1,35 @@
+# This file contains metadata for your plugin. Beginning
+# with version 1.8 this is the preferred way to supply information about a
+# plugin. The current method of embedding metadata in __init__.py will
+# be supported until version 2.0
+
+# This file should be included when you package your plugin.
+
+# Mandatory items:
+
+
+[general]
+name=FlowMapper
+qgisMinimumVersion=2.0
+description=This plugin generates flow lines between discreet nodes for visualising spatial interaction data (e.g. migration, trips).
+version=0.4.1
+about=This plugin generates flow lines between discrete nodes for depicting spatial interaction data (e.g. migration, traffic etc.). Plugin can generate Net/Gross/TwoWay flow lines based and also the flow nodes based on an interaction matrix and a pair of coordinates supplied in plain text (txt) format. All outputs are in shapefile format. Flow and node filtering capabilities are available as well as graduated symbology options. Test dataset and brief documentation is included.
+
+# end of mandatory metadata
+
+# Optional items:
+class_name=FlowMapper
+
+tags= flow, spatial interaction data, movement mapping, flow mapping, OD origin destination
+icon=icon.png
+
+author=Cem GULLUOGLU
+email=cempro@gmail.com
+homepage=http://95.9.195.180
+repository=http://95.9.195.180/plugins.xml
+
+# experimental flag
+experimental=False
+
+# bug tracker 
+tracker=http://hub.qgis.org/projects/flowmapper
