@@ -26,7 +26,7 @@ icon=icon.png
 author=Cem GULLUOGLU
 email=cempro@gmail.com
 homepage=http://95.9.195.180
-repository=http://95.9.195.180/plugins.xml
+repository=https://github.com/cempro/flowmapper
 
 # experimental flag
 experimental=False
