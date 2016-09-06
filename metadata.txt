@@ -32,4 +32,4 @@ repository=http://95.9.195.180/plugins.xml
 experimental=False
 
 # bug tracker 
-tracker=http://hub.qgis.org/projects/flowmapper
+tracker=https://github.com/cempro/flowmapper
