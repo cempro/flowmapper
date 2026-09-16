@@ -8,4 +8,3 @@ def classFactory(iface):
     """Return the plugin instance expected by QGIS 2 and QGIS 3."""
     from .flowmapper import FlowMapper
     return FlowMapper(iface)
-

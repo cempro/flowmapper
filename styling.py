@@ -42,8 +42,8 @@ def apply_layer_presentation(layer, flow_type):
 
     try:
         layer.triggerRepaint()
-    except Exception:
-        pass
+    except Exception as exc:
+        warnings.append("layer repaint: {0}".format(text_type(exc)))
     return warnings
 
 
@@ -60,8 +60,8 @@ def apply_node_presentation(layer):
 
     try:
         layer.triggerRepaint()
-    except Exception:
-        pass
+    except Exception as exc:
+        warnings.append("layer repaint: {0}".format(text_type(exc)))
     return warnings
 
 

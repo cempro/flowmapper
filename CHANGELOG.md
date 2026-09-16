@@ -18,4 +18,5 @@
 - Added optional gain/loss node coloring: gain is green, loss is red and balanced is gray.
 - Added output-to-map options and an About dialog with a dedicated icon.
 - Marked the plugin as non-experimental in metadata.
+- Replaced silent cleanup and repaint exception handling with explicit warning reporting.
 - Deferred advanced classified symbology and filters to a later release.

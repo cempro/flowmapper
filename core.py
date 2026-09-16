@@ -9,6 +9,7 @@ tested independently.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import io
+import logging
 import math
 import os
 import sys
@@ -21,6 +22,7 @@ except NameError:
 
 
 PY2 = sys.version_info[0] == 2
+LOGGER = logging.getLogger(__name__)
 FLOW_TYPES = ("two_way", "gross", "net")
 CURVE_BULGE_RATIO = 0.20
 CURVE_SEGMENTS = 24
@@ -600,8 +602,12 @@ def write_flow_shapefile(output_path, records, epsg, curved=False):
         if os.path.exists(output_path):
             try:
                 driver.DeleteDataSource(ogr_output_path)
-            except Exception:
-                pass
+            except Exception as cleanup_error:
+                LOGGER.warning(
+                    "Could not remove incomplete flow-lines output '%s': %s",
+                    output_path,
+                    cleanup_error,
+                )
         raise
     finally:
         data_source = None
@@ -617,8 +623,12 @@ def _write_utf8_cpg(output_path):
         try:
             with io.open(cpg_path, "w", encoding="ascii") as cpg_file:
                 cpg_file.write("UTF-8\n")
-        except (IOError, OSError):
-            pass
+        except (IOError, OSError) as cpg_error:
+            LOGGER.warning(
+                "Could not write UTF-8 encoding file '%s': %s",
+                cpg_path,
+                cpg_error,
+            )
 
 
 def write_node_shapefile(output_path, records, epsg):
@@ -698,8 +708,12 @@ def write_node_shapefile(output_path, records, epsg):
         if os.path.exists(output_path):
             try:
                 driver.DeleteDataSource(ogr_output_path)
-            except Exception:
-                pass
+            except Exception as cleanup_error:
+                LOGGER.warning(
+                    "Could not remove incomplete flow-nodes output '%s': %s",
+                    output_path,
+                    cleanup_error,
+                )
         raise
     finally:
         data_source = None

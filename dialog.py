@@ -43,7 +43,8 @@ class FlowMapperDialog(QtWidgets.QDialog):
         main_layout = QtWidgets.QVBoxLayout(self)
 
         intro = QtWidgets.QLabel(
-            "Create flow lines and optional node summaries from coordinates, optional names and a square origin-destination matrix.",
+            "Create flow lines and optional node summaries from coordinates, "
+            "optional names and a square origin-destination matrix.",
             self,
         )
         intro.setWordWrap(True)
@@ -52,7 +53,9 @@ class FlowMapperDialog(QtWidgets.QDialog):
         input_group = QtWidgets.QGroupBox("Input text files", self)
         input_layout = QtWidgets.QFormLayout(input_group)
 
-        coordinate_widget, self.coordinate_edit = self._path_row("X Y coordinates (.txt)")
+        coordinate_widget, self.coordinate_edit = self._path_row(
+            "X Y coordinates (.txt)"
+        )
         name_widget, self.name_edit = self._path_row(
             "Optional: one node name per line (.txt)"
         )
