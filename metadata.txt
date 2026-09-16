@@ -1,35 +1,17 @@
-# This file contains metadata for your plugin. Beginning
-# with version 1.8 this is the preferred way to supply information about a
-# plugin. The current method of embedding metadata in __init__.py will
-# be supported until version 2.0
-
-# This file should be included when you package your plugin.
-
-# Mandatory items:
-
-
 [general]
 name=FlowMapper
 qgisMinimumVersion=2.0
-description=This plugin generates flow lines between discreet nodes for visualising spatial interaction data (e.g. migration, trips).
-version=0.4.1
-about=This plugin generates flow lines between discrete nodes for depicting spatial interaction data (e.g. migration, traffic etc.). Plugin can generate Net/Gross/TwoWay flow lines based and also the flow nodes based on an interaction matrix and a pair of coordinates supplied in plain text (txt) format. All outputs are in shapefile format. Flow and node filtering capabilities are available as well as graduated symbology options. Test dataset and brief documentation is included.
-
-# end of mandatory metadata
-
-# Optional items:
-class_name=FlowMapper
-
-tags= flow, spatial interaction data, movement mapping, flow mapping, OD origin destination
-icon=icon.png
-
+qgisMaximumVersion=3.99
+description=Generate straight or curved Two-way, Gross and Net flow lines plus optional flow-node summaries from a square origin-destination matrix.
+version=1.0.0
+about=FlowMapper creates straight or curved Two-way, Gross and Net flow-line shapefiles plus an optional point shapefile containing outgoing, incoming and signed net totals for every node. Optional gain/loss symbology colors gain nodes green, loss nodes red and balanced nodes gray. It uses one Python 2.7/3-compatible codebase for QGIS 2.x and QGIS 3.x.
 author=Cem GULLUOGLU
 email=cempro@gmail.com
-homepage=http://95.9.195.180
+homepage=https://github.com/cempro/flowmapper
 repository=https://github.com/cempro/flowmapper
-
-# experimental flag
+tracker=https://github.com/cempro/flowmapper/issues
+icon=icon.png
+category=Vector
+tags=flow,flow mapping,flow nodes,origin destination,OD matrix,movement,spatial interaction
 experimental=False
-
-# bug tracker 
-tracker=https://github.com/cempro/flowmapper
+deprecated=False
