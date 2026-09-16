@@ -7,7 +7,7 @@ import os
 
 from .core import FlowMapperError, create_flow_shapefile, create_node_shapefile
 from .dialog import AboutDialog, FlowMapperDialog
-from .qt_compat import QtCore, QtGui, QtWidgets, text_type
+from .qt_compat import QtCore, QtGui, QtWidgets, exec_dialog, text_type
 from .styling import apply_layer_presentation, apply_node_presentation
 
 
@@ -63,7 +63,7 @@ class FlowMapper(object):
 
     def show_about(self):
         dialog = AboutDialog(self.iface.mainWindow())
-        dialog.exec_()
+        exec_dialog(dialog)
 
     def _validate_paths(self, values):
         labels = (

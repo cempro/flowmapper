@@ -303,7 +303,7 @@ def _label_qgis2(layer):
     settings.enabled = True
     settings.fieldName = "mag_label"
     settings.isExpression = False
-    settings.placement = QgsPalLayerSettings.Line
+    settings.placement = getattr(QgsPalLayerSettings, "Line")
     settings.placementFlags = QgsPalLayerSettings.AboveLine
     settings.dist = 1.5
     if hasattr(settings, "distInMapUnits"):

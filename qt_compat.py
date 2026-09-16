@@ -27,4 +27,20 @@ def dialog_path(value):
     return text_type(value)
 
 
-__all__ = ("QGIS3", "QtCore", "QtGui", "QtWidgets", "dialog_path", "text_type")
+def exec_dialog(dialog):
+    """Run a modal dialog across PyQt4, PyQt5 and PyQt6 APIs."""
+    execute = getattr(dialog, "exec", None)
+    if execute is None:
+        execute = getattr(dialog, "exec_")
+    return execute()
+
+
+__all__ = (
+    "QGIS3",
+    "QtCore",
+    "QtGui",
+    "QtWidgets",
+    "dialog_path",
+    "exec_dialog",
+    "text_type",
+)

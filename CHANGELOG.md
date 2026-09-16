@@ -19,4 +19,5 @@
 - Added output-to-map options and an About dialog with a dedicated icon.
 - Marked the plugin as non-experimental in metadata.
 - Replaced silent cleanup and repaint exception handling with explicit warning reporting.
+- Added static Qt6-check compatibility without dropping QGIS 2/PyQt4 support.
 - Deferred advanced classified symbology and filters to a later release.
